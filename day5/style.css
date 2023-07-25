@@ -1,0 +1,88 @@
+/* tags */
+/* h1{
+    color: rebeccapurple;
+} */
+
+/* class */
+/* .tech{
+    color: rebeccapurple; 
+} */
+
+/* id */
+#tech{
+    color: rebeccapurple;
+} 
+/* }
+h1,div{
+    color: rebeccapurple;   
+}
+*{
+    color: rebeccapurple;   
+} */
+
+
+/* vh vw */
+body{
+    background-image: url(https://images.unsplash.com/photo-1686485188236-1d79ee4d398c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+}
+p{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    /* text-align: center; */
+    text-align: justify;
+    word-spacing: 5px;
+    text-decoration: line-through;
+}
+/* styling list */
+ul{
+    list-style-type: disc;
+}
+ span{
+    border:1px solid red;
+ }
+.box-model{
+    border:1px solid green;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: blue;
+    /* TRBL */
+    /* padding:  10px 20px 10px 40px; */
+}
+
+/* cacade */
+.box-model{
+    color:red;
+}
+ table{
+    border-collapse: collapse;
+    width:100% ;
+ }
+
+th,
+td{
+    padding: 5px;
+ border: 1px solid black;
+ text-align: center;
+}
+th{
+    color:black;
+}
+tr:hover{
+    background-color: aqua;
+}
+.block-element{
+    border: 1px solid red;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}

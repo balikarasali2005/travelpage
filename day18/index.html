@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>synchronous/asynchronous</title>
+</head>
+<body>
+    <script>
+    // syncronous => every statement ofthe code gets executed one by one 
+    console.log("hello");
+    console.log("world");
+    console.log("fine");
+
+    // asynchronous => three way to do asynchronousin javascript
+    //  1.callback
+    function sum(a ,b, callback){
+condole.log(a+ b);
+callback(2,3,mul)
+    }
+    function mul(a , b){
+        console.log(a * b);
+    }
+    // 2.async/await
+    const getProduct = async() =>{
+        const resp = await fetch("https://dummyjson.com");
+        const products = await resp.json();
+    }
+    getProduct();
+    // 3.promises
+    let myPromise = new Promise(function(myResolve, myReject) {
+  myResolve(); // when successful
+  myReject();  // when error
+});
+// "Consuming Code" (Must wait for a fulfilled Promise)
+myPromise.then(
+  function(value) { /* code if successful */ },
+  function(error) { /* code if some error */ }
+);
+
+</script>
+</body>
+</html>

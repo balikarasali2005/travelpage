@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP METHODS/ASYNC/AWAIT</title>
+</head>
+<body>
+    <script>
+    const getProduct = async() =>{
+        try{
+        const resp = await fetch("https://dummyjson.com");
+        const products = await resp.json();
+    }catch{
+        console.log(products);
+    }
+    }
+    getProduct();
+
+
+// GET METHODS
+const SERVER_URL ="https://dummyjson.com" ;
+const getUsers = async () =>{
+    const resp = await fetch(`${SERVER_URL}/users`, {
+        method:"GET",
+    });
+    const users = await resp.json();
+    // document.write(users.users[0].email);
+    console.log(users);
+};
+const getProducts = async () =>{
+    const resp = await fetch(`${SERVER_URL}/products`, {
+        method:"GET",
+    });
+    const users = await resp.json();
+    console.log(products);
+
+};
+getUsers();
+getProducts();
+
+
+// JSON -> javascript object notation
+const student = {
+    firstname :"pasang",
+    lastname:"tamang",
+    age:"25",
+};
+console.log(student);
+console.log(JSON.stringify(student));
+
+
+const product ={
+    title:"test data",
+};
+const body = JSON.stringify(product);
+
+
+// post method
+const addNewPoduct = async () =>{
+    const response = await fetch(`${SERVER_URL}/product`,{
+        method:"POST",
+        headers:"application/json",
+        body:body
+    });
+}
+
+
+// update method
+ const updateProduct = async (product,id) => {
+    try{
+        const response = await fetch(`${SERVER_URL}/product/${id}`,{
+            method:"PUT",
+            body:body
+        });
+        const updateProd = await response.JSON();
+       console.log(response);
+    }catch(error){}
+ };
+ updateProduct({title:"abc"},2);
+
+//  delete method
+const deleteProduct = async (id) =>{
+    try{
+        event.preventDefault();
+        let id = 2;
+        const response = await fetch(`${SERVER_URL}/product/${id}`,{
+            method:"DELETE",
+        });
+        const deleteProd = await response.JSON();
+        console.log("product delete sucessfull",deleteProd);
+    }catch(error){}
+};
+// DOM->document object model
+    </script>
+</body>
+</html>

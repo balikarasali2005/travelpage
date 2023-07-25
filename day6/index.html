@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment</title>
+    <style>
+    *{
+     margin:0;
+     padding:0;
+    }
+    .container{ 
+        width: 1000px;
+        height: 800px;
+        border: 1px solid red;
+        /* margin-right: auto; */
+        /* margin-left: auto; */
+        margin: auto;
+    }
+    .card{
+        display: inline-block;
+        background-color:pink;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 20px;
+        width: 200px;
+        height: auto;
+        margin-bottom: 10px;
+
+    }
+    .card h4{
+        font-size: 18px;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .card p{
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .card button{
+        background-color: greenyellow;
+        color: black;
+         border: none;
+         padding: 10px 20px;
+         border-radius: 5px;
+         cursor: pointer;
+    }
+
+    /* float property */
+    /* .card-1{
+        float: right;
+    }
+    .card-2{
+        float: left;
+        clear: right;
+    }
+    .card-3{
+        clear: right;
+    }
+p{
+    clear: both;
+} */
+
+/* positionproperty */
+/* static,relative,absolute,fixed,sticky */
+
+.card-1{
+    /* relative to its actual position */
+    position:"relative";
+    top: 20px;
+    left: 50px;
+}
+.card-2{
+    /* relative to its parent */
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+.card-3{
+    position: fixed;
+    height: 20px;
+    right: 0;
+    bottom: 0;
+}
+#card-4{
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+</style>
+</head>
+<body>
+    <h4>float</h4>
+    <div class="container">
+        <div class="card card-1">
+        <h4 class="card-header"> card header1</h4>
+        <p class="card-body">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis distinctio repellendus delectus facilis illo architecto dolore tempore harum velit, quis repudiandae provident facere incidunt fugiat maiores necessitatibus labore assumenda deserunt.
+        </p>
+        <button class="card-footer">view details</button>
+    </div>
+
+        <div class="card card-2">
+        <h4 class="card-header"> card header2</h4>
+        <p class="card-body">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis distinctio repellendus delectus facilis illo architecto dolore tempore harum velit, quis repudiandae provident facere incidunt fugiat maiores necessitatibus labore assumenda deserunt.
+        </p>
+        <button class="card-footer">view details</button>
+    </div>
+
+        <div class="card card-3">
+            <!-- <h4 class="card-header"> card header3</h4> -->
+            <!-- <p class="card-body">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis distinctio repellendus delectus facilis illo architecto dolore tempore harum velit, quis repudiandae provident facere incidunt fugiat maiores necessitatibus labore assumenda deserunt.
+            </p> -->
+            <button class="card-footer">view details</button>
+        </div>
+        <!-- <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, corporis id! Nostrum ipsam reprehenderit nulla asperiores ut in harum iste doloremque fugiat perspiciatis sunt inventore quo dignissimos, voluptatum repellendus laborum!
+        </p> -->
+   
+        <div class="card" id="card-4">
+    <h4 class="card-header"> card header4</h4>
+    <p class="card-body">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis distinctio repellendus delectus facilis illo architecto dolore tempore harum velit, quis repudiandae provident facere incidunt fugiat maiores necessitatibus labore assumenda deserunt.
+    </p>
+    <button class="card-footer">view details</button>
+</div>
+</div>
+</body>
+</html>
